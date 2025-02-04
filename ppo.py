@@ -360,7 +360,7 @@ def evaluate_agent(env, agent, n_episodes=5):
 
 def main():
     # Load and preprocess data
-    df = pd.read_csv('NULB.csv')
+    df = pd.read_csv('LLBS.csv')
     env = StockTradingEnv(df)
     
     state_dim = env.observation_space.shape[0]
@@ -379,7 +379,7 @@ def main():
         'model_state_dict': agent.actor_critic.state_dict(),
         'running_mean': agent.running_mean,
         'running_std': agent.running_std
-    }, 'ppo_model.pth')
+    }, 'ppo_modeLLBS.pth')
     
     # Plot training progress
     import matplotlib.pyplot as plt
